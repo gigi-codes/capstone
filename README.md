@@ -1,11 +1,15 @@
-# ![](images/bart.png) Model Transit Ridership as Fuel Prices Fluctuate
+# ![](images/barti.png) Model Transit Ridership as Fuel Prices Fluctuate
+
+![](images/barti.png) ![](images/bart.png)
+
 ---
 SUMMARY
 ---
 I will look at ridership on 
 
-* caltrain
 * bart
+* ~~caltrain~~ upon further exploration, Caltrain's ridership metric is a strictly yearly-counted number, with no sampling on daily, weekly or even monthly. Project will only consider BART data. 
+
 
 to model increase or decrease as a function of fuel prices. If given time, I will look at 
 * other systems: LIRR
