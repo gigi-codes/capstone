@@ -3,34 +3,10 @@
 ![](images/barti.png) ![](images/bart.png)
 
 ---
-SUMMARY
+DATA
 ---
 I will look at ridership on 
 
-* bart
-* ~~caltrain~~ upon further exploration, Caltrain's ridership metric is a strictly yearly-counted number, with no sampling on daily, weekly or even monthly. Project will only consider BART data. 
-
-to model increase or decrease as a function of fuel prices. If given time, I will look at 
-* other systems: LIRR
-* model 
-
-I want to focus on the information of on and off boarding to look at commuter vs intra-city/ 'urban' rides
-
----
-
-## Background 
-* How elastic/inelastic is mass transit ridership as a function of fuel price? 
-* Can fuel prices be a tool use to increase ridership? 
-
-
-new information to consider: 
-* increased car ownership
-* increased consumer debt
-* availability of 
-
-
----
-## Data Acquisition & Cleaning 
 ---
 ### <b>Data:</b> Ridership data 
 **Description:** Ridership reports from the BART reporting agency website daing to 2009. 
@@ -45,6 +21,21 @@ new information to consider:
 
 ### <b>Data:</b> <a href = '' > Fuel from EIA </a>
 **Description:** The fuel stats is collected by federal fuel agency
+
+
+### <b>Data:</b> <a href = 'https://data.ca.gov/dataset/california-gasoline-data-facts-and-statistics' > CA Gas Data, Facts, and Statistics </a>
+* 
+
+
+https://data.ca.gov/dataset/time-walk-bike-to-work
+https://data.ca.gov/dataset/annual-miles-traveled
+https://data.ca.gov/dataset/california-air-resources-board-gis-datasets
+https://data.ca.gov/dataset/transportation-to-work
+https://data.ca.gov/dataset/driver-licenses-outstanding-by-county/resource/0abef7f0-285f-4887-9b4e-69e86d89ceb1
+https://data.ca.gov/dataset/vehicle-fuel-type-count-by-zip-code
+
+
+
 
 <!-- 
 year(s) | name/link     | description                  | size 
@@ -77,12 +68,3 @@ I trained multiple estimators to model the outcomes reported in the _CalEnviroSc
 variable name   | type      | description 
 ---             | ---       | ---   
 ridership         | fuelprice   | increase/decrease
-
----
-
-## _Exploratory Data Analyses_ 
-
-* a summary
-
-<!-- <img src = filepathnoquotes ><br>
-_a caption._ -->
