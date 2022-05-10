@@ -131,3 +131,6 @@ dmypy.json
 # DS_Store
 .DS_Store
 DS_Store
+
+# literature directory will find out if it works
+/lit
