@@ -15,13 +15,9 @@ Sourcing local data - at the ZIP-code or even county level, would likely yiedl b
 ## DATA
 ---
 
-Data was sourced via various sources, through API requests and extracting from spreadsheets obtained directly from state sources. Details can be found in the [data](/data/) directory README. 
+Data was sourced via various sources, through API requests and extracting from spreadsheets obtained directly from state sources. Details can be found in the [data acquisition notebooks](/code/01_API_pulls.ipynb)
 
----
 
-## Background 
-* How elastic/inelastic is mass transit ridership as a function of fuel price? 
-* Can fuel prices be a tool use to increase ridership? 
 ---
 
 ## _Exploratory Data Analyses_ 
@@ -44,6 +40,17 @@ _Greykite model with extra regressors performed best on data prior to COVID_
 <img src=images/prophet.png>
 
 _PROPHET model poorly predicted downward trend even prior to COVID decrease_
+    
+
+
+ID      | MODEL   | DATA      | RMSE        | MSE       | MAE               | MAPE           | AIC 
+---     | ---     | ---        | ---       | ---       | ---             | ---             | ---  
+A       | PROPHET | < 2020   | 446 152   | 199 052 198 567| 375 686             
+B       | PROPHET | All BART   | 1 243 269   | 5 457 200 928 927| 1 181 450             
+C       | Greykite| All BART    | 911 443 | 830 729 769 011   |909 234  | 205 | 4 621
+D       | Greykite| < 2020    | 1 053 866| 110 633 739 830  |1 051 141|  5.25 | 4 581
+D |     ARIMA   | < 2020  | 208 415 |  43 437 169 639| 89 738 | |   5880
+
 
 --- 
 ## Conclusion: 
