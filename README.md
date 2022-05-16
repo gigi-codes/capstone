@@ -1,88 +1,51 @@
-# ![](images/barti.png) Model Transit Ridership as Fuel Prices Fluctuate
+# Model Transit Ridership as Fuel Prices Fluctuate
 
-![](images/barti.png) ![](images/bart.png)
+![](images/barti.png)
 
 ---
 SUMMARY
 ---
-I will look at ridership on 
+I sought to model ridership in general, and with a few additional regressors. Various models using Facebook's _Prophet_ and Linkedin's _Greykite_ frameworks produced good results for modelling data prior to early-COVID-pandemic-shutdowns, but they and _ARIMA_ models failed to capture the percipitous monthly riderhip drop, and exceedingly low rise.
 
-* bart
-* ~~caltrain~~ upon further exploration, Caltrain's ridership metric is a strictly yearly-counted number, with no sampling on daily, weekly or even monthly. Project will only consider BART data. 
+I included average _fuel price_, increased number of _registere cars_ as well as _consumer debt_ as additional regressors in both _Prophet_ and _Greykite_, but there was no significant effect at that resolution. 
 
-to model increase or decrease as a function of fuel prices. If given time, I will look at 
-* other systems: LIRR
-* model 
+Sourcing local data - at the ZIP-code or even county level, would likely yiedl better results. 
 
-I want to focus on the information of on and off boarding to look at commuter vs intra-city/ 'urban' rides
+--- 
+## DATA
+---
+
+Data was sourced via various sources, through API requests and extracting from spreadsheets obtained directly from state sources. Details can be found in the [data](/data/) directory README. 
 
 ---
 
 ## Background 
 * How elastic/inelastic is mass transit ridership as a function of fuel price? 
 * Can fuel prices be a tool use to increase ridership? 
-
-
-new information to consider: 
-* increased car ownership
-* increased consumer debt
-* availability of 
-
-
----
-## Data Acquisition & Cleaning 
----
-### <b>Data:</b> Ridership data 
-**Description:** Ridership reports from the BART reporting agency website daing to 2009. 
-
-
- Source  | File  | Report Date  | Shape | 
- ---     | ---   |  ---         |  ---  |
- <a href = link > BART </a> |  <a href =  link > Data (xlsx) </a> | April 2013 | (1500,49) |
- <a href = link > Caltrain </a> |  <a href =  link > Data (xlsx) </a> | April 2013 | (1500,49) |
-
-<br>
-
-### <b>Data:</b> <a href = '' > Fuel from EIA </a>
-**Description:** The fuel stats is collected by federal fuel agency
-
-<!-- 
-year(s) | name/link     | description                  | size 
----     | ---           | ---                          | ---
-2012    |   xxx         |  business by type in county  | row x col 
-2012    |   xxx         |  business counts by zip      | row x col  -->
-
-
-name        | description 
----         | --- 
-avg         | zip
-
-### Data: _Model Features_
-
-<br >
-
-variable name   | type      | description 
----             | ---       | ---   
-riders         | numeric   | count, modelled
-riders         | numeric   | count, faregate info
-fuel price      | weekly average    | city
-fuel price      | monthly average    | zip 
-
----
-
-## _Target_
-
-I trained multiple estimators to model the outcomes reported in the _CalEnviroScreen_ reports to build upon that work: 
-
-variable name   | type      | description 
----             | ---       | ---   
-ridership         | fuelprice   | increase/decrease
-
 ---
 
 ## _Exploratory Data Analyses_ 
 
-* a summary
+<img src =images/barrt.png>
+<br>
+<img src =images/fuel.png>
 
-<!-- <img src = filepathnoquotes ><br>
-_a caption._ -->
+### MODELS: 
+Model performance visualized below
+
+<img src =images/arima.png>
+
+_ARIMA model over gridsearch yielded (4,1,4) model._
+
+<img src=images/greykite.png>
+
+_Greykite model with extra regressors performed best on data prior to COVID_
+
+<img src=images/prophet.png>
+
+_PROPHET model poorly predicted downward trend even prior to COVID decrease_
+
+--- 
+## Conclusion: 
+Although _Prophet_ and _Greykite_ are extremely powerful and flexible, tried-and-true _ARIMA_ produced the best model for forecasting rideship, both for data inclusive of COVID shutdowns and without. As a true time-series model, the changes were better captured. _Prophet_ and _Greykite_ are built as standard linear regerssors parameters and coefficients to model holidays, seasons, weekends, etc. - the limitations of monthly data also negate the power and flexibility of frameworks designed to model just that. 
+> <b>Further Work:</b> source data elsewhere, as non-official venues may have finer granularity. With finer temporal and spatial granularity, a robust and powerful model is possible. .
