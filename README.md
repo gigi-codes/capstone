@@ -40,8 +40,19 @@ _Greykite model with extra regressors performed best on data prior to COVID_
 <img src=images/prophet.png>
 
 _PROPHET model poorly predicted downward trend even prior to COVID decrease_
-    
 
+![](images/prophet_pre.png)
+
+_PROPHET_ framework forecast within confidence
+
+
+![](images/grey_pre.png)
+
+_Greykite_ framework forecast pre-pandemic
+
+![](images/greyCompo.png)
+
+_Greykite_ framework components for all data
 
 ID      | MODEL   | DATA      | RMSE        | MSE       | MAE               | MAPE           | AIC 
 ---     | ---     | ---        | ---       | ---       | ---             | ---             | ---  
