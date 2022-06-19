@@ -5,7 +5,7 @@
 ---
 SUMMARY
 ---
-I sought to model ridership in general, and with a few additional regressors. Various models using [Facebook's _Prophet_](https://facebook.github.io/prophet/) and [Linkedin's _Greykite_](https://linkedin.github.io/greykite/) frameworks produced good results for modelling data prior to early-COVID-pandemic-shutdowns, but they and _ARIMA_ models failed to capture the percipitous monthly riderhip drop, and exceedingly low rise.
+I modelled ridership in general, and with a few additional regressors. Various models using [Facebook's _Prophet_](https://facebook.github.io/prophet/) and [Linkedin's _Greykite_](https://linkedin.github.io/greykite/) frameworks produced good results for modelling data prior to early-COVID-pandemic-shutdowns, but they and _ARIMA_ models failed to capture the percipitous, unprescendented monthly riderhip drop, and exceedingly low rise. 
 
 I included average _fuel price_, increased number of _registered cars_ as well as _consumer debt_ as additional regressors in both _Prophet_ and _Greykite_, but there was no significant effect at that resolution. 
 
@@ -25,8 +25,6 @@ Data was sourced via various sources, through API requests and extracting from s
 I've set up interactive visualizations using [Plotly](https://plotly.com) on my [website](https://blog.giovannaguevara.net/?page_id=961). Ridership numbers had a downward decline starting in late 2018, so initial forecasts predicted lower ridership in 2020 even prior to the pandemic. 
 
 Summary statistics for daily, weekly, monthy and annual ridership shown below.
-
-[Facebook's _Prophet_](https://facebook.github.io/prophet/)
 
 <img src =images/barrt.png>
 <br>
