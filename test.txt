@@ -1,2 +1,0 @@
-Test file to test my git connection, etc. 
-Ended up removing staged commits. I think a big file got stuck somewhere. 
