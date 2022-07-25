@@ -9,7 +9,15 @@ I modelled ridership in general, and with a few additional regressors. Various m
 
 I included average _fuel price_, increased number of _registered cars_ as well as _consumer debt_ as additional regressors in both _Prophet_ and _Greykite_, but there was no significant effect at that resolution. 
 
-Sourcing local data - at the ZIP-code or even county level, would likely yiedl better results. 
+Sourcing local data - at the ZIP-code or even county level, would likely yield better results. 
+
+=== 
+CURRENTLY WORKING ON HOURLY DATA. 
+
+The also unprecedented fuel prices further exemplify one of the main challenges in time-series modeling, which has prompted a very simple plot of at-the-pump-price-rate-of-change compared to petroleum-barrel-price-change-rate compared to wheat and bread. 
+
+A little bit of Econ. 
+
 
 --- 
 ## DATA
